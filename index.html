@@ -37,6 +37,24 @@ body { margin:0; -webkit-font-smoothing:antialiased; }
 a { color:#5C5B3B; text-decoration:none; }
 a:hover { opacity:0.7; }
 ::selection { background:#CBA373; color:#201F1B; }
+.btn-gold { transition:opacity .15s ease, transform .15s ease; }
+.btn-gold:hover { opacity:0.88; }
+.link-underline { transition:opacity .15s ease; }
+nav a { padding:6px 2px; }
+@media (max-width:1024px) {
+  .grid-2col, .grid-3col, .grid-4col { grid-template-columns:1fr !important; }
+  .grid-gap-lg { gap:40px !important; }
+}
+@media (max-width:768px) {
+  body { font-size:17px; }
+  .section-pad { padding-left:22px !important; padding-right:22px !important; padding-top:64px !important; padding-bottom:64px !important; }
+  .corner-index { display:none !important; }
+  header[style] { padding:20px 22px !important; flex-wrap:wrap; }
+  nav[style] { gap:16px !important; order:3; width:100%; padding-top:12px; }
+  .hero-media { order:2; margin-top:32px; }
+  h1[style] { margin-bottom:24px !important; }
+  .h2-title { font-size:32px !important; }
+}
 </style>
 </head>
 <body>
@@ -49,45 +67,46 @@ a:hover { opacity:0.7; }
 <header style="position:static; background:#FAF8F4; border-bottom:1px solid rgba(42,42,38,0.1); display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px 40px;">
 <img src="assets/img/logo.png" alt="Marmore&amp;Co" style="height:22px; width:auto; flex-shrink:0;">
 <nav style="display:flex; gap:13px; flex-shrink:1; min-width:0;">
-<a href="#tese" style="font-size:10px; font-weight:500; letter-spacing:0.03em; text-transform:uppercase; color:rgba(42,42,38,0.6); white-space:nowrap;">Tese</a>
-<a href="#plataforma" style="font-size:10px; font-weight:500; letter-spacing:0.03em; text-transform:uppercase; color:rgba(42,42,38,0.6); white-space:nowrap;">Plataforma</a>
-<a href="#consultoria" style="font-size:10px; font-weight:500; letter-spacing:0.03em; text-transform:uppercase; color:rgba(42,42,38,0.6); white-space:nowrap;">Consultoria</a>
-<a href="#comotrabalhamos" style="font-size:10px; font-weight:500; letter-spacing:0.03em; text-transform:uppercase; color:rgba(42,42,38,0.6); white-space:nowrap;">Método</a>
-<a href="#quemsomos" style="font-size:10px; font-weight:500; letter-spacing:0.03em; text-transform:uppercase; color:rgba(42,42,38,0.6); white-space:nowrap;">Quem está por trás</a>
-<a href="#contato" style="font-size:10px; font-weight:500; letter-spacing:0.03em; text-transform:uppercase; color:rgba(42,42,38,0.6); white-space:nowrap;">Contato</a>
+<a href="#tese" style="font-size:14px; font-weight:500; letter-spacing:0.01em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Tese</a>
+<a href="#plataforma" style="font-size:14px; font-weight:500; letter-spacing:0.01em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Plataforma</a>
+<a href="#consultoria" style="font-size:14px; font-weight:500; letter-spacing:0.01em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Consultoria</a>
+<a href="#comotrabalhamos" style="font-size:14px; font-weight:500; letter-spacing:0.01em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Método</a>
+<a href="#quemsomos" style="font-size:14px; font-weight:500; letter-spacing:0.01em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Quem está por trás</a>
+<a href="#contato" style="font-size:14px; font-weight:500; letter-spacing:0.01em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Contato</a>
 </nav>
-<a href="#plataforma" style="display:inline-flex; align-items:center; gap:6px; font-family:'Mirai',sans-serif; font-weight:500; font-size:12px; color:#2A2A26; border-bottom:1px solid rgba(42,42,38,0.3); padding-bottom:3px; white-space:nowrap; flex-shrink:0;">Conhecer a plataforma <span>→</span></a>
+<a href="#plataforma" class="link-underline" style="display:inline-flex; align-items:center; gap:6px; font-family:'Mirai',sans-serif; font-weight:500; font-size:14px; color:#2A2A26; border-bottom:1px solid rgba(42,42,38,0.3); padding-bottom:4px; white-space:nowrap; flex-shrink:0;">Conhecer a plataforma <span>→</span></a>
 </header>
 
-<section id="hero" style="position:relative; max-width:1360px; margin:0 auto; padding:100px 56px 60px 56px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center;">
-<div style="position:absolute; top:36px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">01 — Início</div>
+<section id="hero" class="grid-2col section-pad" style="position:relative; max-width:1360px; margin:0 auto; padding:100px 56px 60px 56px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;">
+<div class="corner-index" style="position:absolute; top:36px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">01 — Início</div>
 <div>
-<h1 style="font-family:'Nephilm',serif; font-size:clamp(32px,4.2vw,58px); font-weight:400; line-height:1.15; letter-spacing:-0.015em; text-transform:none; margin:0 0 32px 0;">Sua clínica pode performar à altura de seu potencial.</h1>
-<p style="font-size:18px; line-height:1.7; color:rgba(42,42,38,0.68); max-width:520px; margin:0; font-weight:300;">A Mármore identifica onde o desempenho está escapando e transforma oportunidades em decisões, execução e resultado.</p>
+<h1 style="font-family:'Nephilm',serif; font-size:clamp(32px,4.2vw,58px); font-weight:400; line-height:1.15; letter-spacing:-0.015em; text-transform:none; margin:0 0 28px 0;">Sua clínica pode performar à altura de seu potencial.</h1>
+<p style="font-size:19px; line-height:1.65; color:rgba(42,42,38,0.82); max-width:560px; margin:0 0 36px 0; font-weight:300;">A Mármore identifica onde o desempenho está escapando e transforma oportunidades em decisões, execução e resultado.</p>
+<a href="#contato" class="btn-gold" style="display:inline-block; font-family:'Mirai',sans-serif; font-weight:500; font-size:15px; padding:17px 34px; background:#CBA373; color:#26251b; border-radius:6px;">Falar com a Mármore</a>
 </div>
-<div style="aspect-ratio:4/5; width:100%; border-radius:2px; overflow:hidden;">
+<div class="hero-media" style="aspect-ratio:4/5; width:100%; border-radius:2px; overflow:hidden;">
 <img src="assets/img/texture-2.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
 </div>
 </section>
 
-<section id="problema" style="position:relative; max-width:900px; margin:0 auto; padding:120px 56px; border-top:1px solid rgba(42,42,38,0.1);">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">02 — Problema</div>
+<section id="problema" class="section-pad" style="position:relative; max-width:900px; margin:0 auto; padding:120px 56px; border-top:1px solid rgba(42,42,38,0.1);">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">02 — Problema</div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">O problema</div>
-<h2 style="font-family:'Nephilm',serif; font-size:36px; font-weight:400; line-height:1.25; letter-spacing:-0.01em; margin:0 0 28px 0;">Informação nunca foi o problema. Contexto, sim.</h2>
-<p style="font-size:17px; line-height:1.75; color:rgba(42,42,38,0.7); margin:0 0 18px 0;">Sua clínica já opera com ERP, agenda, prontuário, financeiro, contador, planilhas e WhatsApp. Os dados existem — espalhados, desconectados, sem relação entre si.</p>
-<p style="font-size:17px; line-height:1.75; color:rgba(42,42,38,0.7); margin:0;">O médico não sabe o que realmente importa agora, qual decisão pesa mais, onde concentrar a atenção. Não falta informação. Falta clareza para agir sobre ela.</p>
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 28px 0; max-width:680px;">Informação nunca foi o problema. Contexto, sim.</h2>
+<p style="font-size:18px; line-height:1.65; color:rgba(42,42,38,0.82); max-width:660px; margin:0 0 18px 0;">Sua clínica já opera com ERP, agenda, prontuário, financeiro, contador, planilhas e WhatsApp. Os dados existem — espalhados, desconectados, sem relação entre si.</p>
+<p style="font-size:18px; line-height:1.65; color:rgba(42,42,38,0.82); max-width:660px; margin:0;">O médico não sabe o que realmente importa agora, qual decisão pesa mais, onde concentrar a atenção. Não falta informação. Falta clareza para agir sobre ela.</p>
 </section>
 
 <section id="tese" style="position:relative; background:#26251b; color:#F4F1EA;">
-<div style="max-width:1180px; margin:0 auto; padding:120px 56px; position:relative;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,241,234,0.4); font-weight:500;">03 — Como Pensamos</div>
+<div class="section-pad" style="max-width:1180px; margin:0 auto; padding:120px 56px; position:relative;">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,241,234,0.4); font-weight:500;">03 — Como Pensamos</div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Uma nova forma de pensar a gestão</div>
-<h2 style="font-family:'Nephilm',serif; font-size:40px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 64px 0; max-width:760px;">Informação vira clareza. Clareza vira decisão. Decisão vira execução.</h2>
-<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:40px;">
-<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Informação</div><div style="font-size:14px; line-height:1.65; color:rgba(244,241,234,0.68);">Tudo que sua clínica já registra — agenda, financeiro, prontuário, atendimento.</div></div>
-<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Clareza</div><div style="font-size:14px; line-height:1.65; color:rgba(244,241,234,0.68);">Organizada e priorizada, mostrando o que realmente pesa agora.</div></div>
-<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Decisão</div><div style="font-size:14px; line-height:1.65; color:rgba(244,241,234,0.68);">Cada leitura vem com uma recomendação — não um painel para interpretar.</div></div>
-<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Execução</div><div style="font-size:14px; line-height:1.65; color:rgba(244,241,234,0.68);">Acompanhamento até a mudança acontecer — não só ser sugerida.</div></div>
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 56px 0; max-width:780px;">Informação vira clareza. Clareza vira decisão. Decisão vira execução.</h2>
+<div class="grid-4col grid-gap-lg" style="display:grid; grid-template-columns:repeat(4,1fr); gap:40px;">
+<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Informação</div><div style="font-size:16px; line-height:1.6; color:rgba(244,241,234,0.78);">Tudo que sua clínica já registra — agenda, financeiro, prontuário, atendimento.</div></div>
+<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Clareza</div><div style="font-size:16px; line-height:1.6; color:rgba(244,241,234,0.78);">Organizada e priorizada, mostrando o que realmente pesa agora.</div></div>
+<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Decisão</div><div style="font-size:16px; line-height:1.6; color:rgba(244,241,234,0.78);">Cada leitura vem com uma recomendação — não um painel para interpretar.</div></div>
+<div><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Execução</div><div style="font-size:16px; line-height:1.6; color:rgba(244,241,234,0.78);">Acompanhamento até a mudança acontecer — não só ser sugerida.</div></div>
 </div>
 </div>
 </section>
@@ -96,36 +115,36 @@ a:hover { opacity:0.7; }
 <img src="assets/img/texture-1.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
 </div>
 
-<section id="solucao" style="position:relative; max-width:1180px; margin:0 auto; padding:120px 56px;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">04 — Como Resolvemos</div>
+<section id="solucao" class="section-pad" style="position:relative; max-width:1180px; margin:0 auto; padding:96px 56px;">
+<div class="corner-index" style="position:absolute; top:96px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">04 — Como Resolvemos</div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Como resolvemos</div>
-<h2 style="font-family:'Nephilm',serif; font-size:40px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 56px 0; max-width:640px;">Duas frentes. Um único problema.</h2>
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; margin-bottom:40px;">
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 48px 0; max-width:680px;">Duas frentes. Um único problema.</h2>
+<div class="grid-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; margin-bottom:40px;">
 <div>
-<div style="font-family:'Nephilm',serif; font-size:22px; margin-bottom:12px;">Plataforma</div>
-<div style="font-size:15px; line-height:1.7; color:rgba(42,42,38,0.7);">Torna a clareza possível todos os dias. Conecta o que já existe e devolve prioridade e contexto em tempo real.</div>
+<div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Plataforma</div>
+<div style="font-size:16px; line-height:1.6; color:rgba(42,42,38,0.8);">Torna a clareza possível todos os dias. Conecta o que já existe e devolve prioridade e contexto em tempo real.</div>
 </div>
 <div>
-<div style="font-family:'Nephilm',serif; font-size:22px; margin-bottom:12px;">Consultoria</div>
-<div style="font-size:15px; line-height:1.7; color:rgba(42,42,38,0.7);">Acelera as decisões mais importantes. Aplica a leitura da plataforma à realidade específica da sua clínica.</div>
+<div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:12px;">Consultoria</div>
+<div style="font-size:16px; line-height:1.6; color:rgba(42,42,38,0.8);">Acelera as decisões mais importantes. Aplica a leitura da plataforma à realidade específica da sua clínica.</div>
 </div>
 </div>
-<div style="border-top:1px solid rgba(42,42,38,0.12); padding-top:24px; font-size:15px; color:rgba(42,42,38,0.6);">Uma não existe para justificar a outra. As duas existem para resolver o mesmo problema.</div>
+<div style="border-top:1px solid rgba(42,42,38,0.12); padding-top:24px; font-size:16px; color:rgba(42,42,38,0.72);">Uma não existe para justificar a outra. As duas existem para resolver o mesmo problema.</div>
 </section>
 
 <section id="plataforma" style="position:relative; background:#26251b; color:#F4F1EA;">
-<div style="max-width:1180px; margin:0 auto; padding:120px 56px; position:relative;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,241,234,0.4); font-weight:500;">05 — Plataforma</div>
+<div class="section-pad" style="max-width:1180px; margin:0 auto; padding:120px 56px; position:relative;">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,241,234,0.4); font-weight:500;">05 — Plataforma</div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Plataforma</div>
-<h2 style="font-family:'Nephilm',serif; font-size:38px; font-weight:400; line-height:1.25; letter-spacing:-0.01em; margin:0 0 24px 0; max-width:680px;">O lugar onde a clareza acontece todos os dias.</h2>
-<p style="font-size:16px; line-height:1.75; color:rgba(244,241,234,0.68); max-width:600px; margin:0 0 56px 0;">Ela não substitui seu ERP, prontuário ou agenda. Conecta o que já existe e devolve uma leitura única: o que importa, por que importa, o que fazer a respeito.</p>
-<div style="display:grid; grid-template-columns:1fr 1.1fr; gap:64px; align-items:center;">
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 24px 0; max-width:680px;">O lugar onde a clareza acontece todos os dias.</h2>
+<p style="font-size:18px; line-height:1.65; color:rgba(244,241,234,0.82); max-width:640px; margin:0 0 48px 0;">Ela não substitui seu ERP, prontuário ou agenda. Conecta o que já existe e devolve uma leitura única: o que importa, por que importa, o que fazer a respeito.</p>
+<div class="grid-2col" style="display:grid; grid-template-columns:1fr 1.1fr; gap:64px; align-items:center;">
 <div style="display:flex; flex-direction:column; gap:28px;">
-<div><div style="font-weight:500; font-size:15px; margin-bottom:6px;">Organiza</div><div style="font-size:13px; line-height:1.6; color:rgba(244,241,234,0.6);">Agenda, financeiro e prontuário, sem trocar de tela.</div></div>
-<div><div style="font-weight:500; font-size:15px; margin-bottom:6px;">Prioriza</div><div style="font-size:13px; line-height:1.6; color:rgba(244,241,234,0.6);">O que precisa de decisão hoje, em destaque.</div></div>
-<div><div style="font-weight:500; font-size:15px; margin-bottom:6px;">Explica</div><div style="font-size:13px; line-height:1.6; color:rgba(244,241,234,0.6);">Nenhum número aparece sem o porquê.</div></div>
-<div><div style="font-weight:500; font-size:15px; margin-bottom:6px;">Orienta</div><div style="font-size:13px; line-height:1.6; color:rgba(244,241,234,0.6);">Cada leitura termina em recomendação — não em gráfico solto.</div></div>
-<div style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; font-family:'Mirai',sans-serif; font-weight:500; font-size:13px; color:#F4F1EA; border-bottom:1px solid rgba(244,241,234,0.35); padding-bottom:3px; width:fit-content;">Em breve</div>
+<div><div style="font-weight:500; font-size:16px; margin-bottom:6px;">Organiza</div><div style="font-size:15px; line-height:1.6; color:rgba(244,241,234,0.72);">Agenda, financeiro e prontuário, sem trocar de tela.</div></div>
+<div><div style="font-weight:500; font-size:16px; margin-bottom:6px;">Prioriza</div><div style="font-size:15px; line-height:1.6; color:rgba(244,241,234,0.72);">O que precisa de decisão hoje, em destaque.</div></div>
+<div><div style="font-weight:500; font-size:16px; margin-bottom:6px;">Explica</div><div style="font-size:15px; line-height:1.6; color:rgba(244,241,234,0.72);">Nenhum número aparece sem o porquê.</div></div>
+<div><div style="font-weight:500; font-size:16px; margin-bottom:6px;">Orienta</div><div style="font-size:15px; line-height:1.6; color:rgba(244,241,234,0.72);">Cada leitura termina em recomendação — não em gráfico solto.</div></div>
+<div style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; font-family:'Mirai',sans-serif; font-weight:500; font-size:14px; color:#F4F1EA; border-bottom:1px solid rgba(244,241,234,0.35); padding-bottom:3px; width:fit-content;">Em breve</div>
 </div>
 <div style="aspect-ratio:16/10; width:100%; border-radius:2px; overflow:hidden;">
 <img src="assets/img/texture-1.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
@@ -135,40 +154,40 @@ a:hover { opacity:0.7; }
 </section>
 
 <section id="consultoria" style="position:relative; background:#DCD8CF;">
-<div style="max-width:1180px; margin:0 auto; padding:120px 56px; display:grid; grid-template-columns:1fr 1fr; gap:64px; position:relative;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">06 — Consultoria</div>
+<div class="grid-2col section-pad" style="max-width:1180px; margin:0 auto; padding:120px 56px; display:grid; grid-template-columns:1fr 1fr; gap:64px; position:relative;">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">06 — Consultoria</div>
 <div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#916C53; margin-bottom:20px;">Consultoria</div>
-<h2 style="font-family:'Nephilm',serif; font-size:36px; font-weight:400; line-height:1.25; letter-spacing:-0.01em; margin:0 0 20px 0;">Transforma diagnóstico em prioridade, execução e resultado.</h2>
-<p style="font-size:16px; line-height:1.7; color:rgba(42,42,38,0.7); margin:0 0 28px 0;">Compreendemos o contexto da clínica, definimos o que precisa avançar e acompanhamos a execução para que as decisões produzam mudança concreta.</p>
-<a href="#contato" style="display:inline-flex; align-items:center; gap:6px; font-family:'Mirai',sans-serif; font-weight:500; font-size:13px; color:#2A2A26; border-bottom:1px solid rgba(42,42,38,0.35); padding-bottom:3px; width:fit-content;">Falar com a Mármore <span>→</span></a>
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0 0 20px 0;">Transforma diagnóstico em prioridade, execução e resultado.</h2>
+<p style="font-size:18px; line-height:1.6; color:rgba(42,42,38,0.82); max-width:600px; margin:0 0 28px 0;">Compreendemos o contexto da clínica, definimos o que precisa avançar e acompanhamos a execução para que as decisões produzam mudança concreta.</p>
+<a href="#contato" class="link-underline" style="display:inline-flex; align-items:center; gap:6px; font-family:'Mirai',sans-serif; font-weight:500; font-size:15px; color:#2A2A26; border-bottom:1px solid rgba(42,42,38,0.35); padding-bottom:4px; width:fit-content;">Falar com a Mármore <span>→</span></a>
 </div>
 <div style="display:flex; flex-direction:column; gap:0;">
-<div style="padding:20px 0; border-bottom:1px solid rgba(42,42,38,0.18); font-size:15px; font-weight:500;">Estrutura operacional e processos</div>
-<div style="padding:20px 0; border-bottom:1px solid rgba(42,42,38,0.18); font-size:15px; font-weight:500;">Gestão financeira e indicadores</div>
-<div style="padding:20px 0; border-bottom:1px solid rgba(42,42,38,0.18); font-size:15px; font-weight:500;">Crescimento sustentável</div>
-<div style="padding:20px 0; font-size:15px; font-weight:500;">Experiência e padronização do paciente</div>
+<div style="padding:20px 0; border-bottom:1px solid rgba(42,42,38,0.18); font-size:16px; font-weight:500;">Estrutura operacional e processos</div>
+<div style="padding:20px 0; border-bottom:1px solid rgba(42,42,38,0.18); font-size:16px; font-weight:500;">Gestão financeira e indicadores</div>
+<div style="padding:20px 0; border-bottom:1px solid rgba(42,42,38,0.18); font-size:16px; font-weight:500;">Crescimento sustentável</div>
+<div style="padding:20px 0; font-size:16px; font-weight:500;">Experiência e padronização do paciente</div>
 </div>
 </div>
 </section>
 
-<section id="comotrabalhamos" style="position:relative; max-width:1180px; margin:0 auto; padding:120px 56px;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">07 — Método</div>
+<section id="comotrabalhamos" class="section-pad" style="position:relative; max-width:1180px; margin:0 auto; padding:120px 56px;">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">07 — Método</div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Como fazemos</div>
-<h2 style="font-family:'Nephilm',serif; font-size:40px; font-weight:400; line-height:1.2; letter-spacing:-0.015em; text-transform:none; margin:0 0 12px 0; max-width:760px;">Método Contraposto</h2>
-<p style="font-size:16px; line-height:1.7; color:rgba(42,42,38,0.65); max-width:640px; margin:0 0 56px 0;">A estrutura por trás de cada decisão que tomamos com você — quatro eixos em equilíbrio, como a escultura clássica que dá nome ao método.</p>
-<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(42,42,38,0.12); margin-bottom:72px;">
-<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.25); margin-bottom:18px;">01</div><div style="font-weight:500; font-size:15px; margin-bottom:8px; letter-spacing:0.02em;">ESTRATÉGIA</div><div style="font-size:13px; line-height:1.6; color:rgba(42,42,38,0.65);">Direcionamento empresarial e visão de crescimento.</div></div>
-<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.25); margin-bottom:18px;">02</div><div style="font-weight:500; font-size:15px; margin-bottom:8px; letter-spacing:0.02em;">ESTRUTURA</div><div style="font-size:13px; line-height:1.6; color:rgba(42,42,38,0.65);">Organização interna e desenho operacional.</div></div>
-<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.25); margin-bottom:18px;">03</div><div style="font-weight:500; font-size:15px; margin-bottom:8px; letter-spacing:0.02em;">OPERAÇÕES</div><div style="font-size:13px; line-height:1.6; color:rgba(42,42,38,0.65);">Padronização e eficiência do dia a dia.</div></div>
-<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.25); margin-bottom:18px;">04</div><div style="font-weight:500; font-size:15px; margin-bottom:8px; letter-spacing:0.02em;">RELACIONAMENTO</div><div style="font-size:13px; line-height:1.6; color:rgba(42,42,38,0.65);">Experiência do paciente e retenção.</div></div>
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.015em; text-transform:none; margin:0 0 16px 0; max-width:760px;">Método Contraposto</h2>
+<p style="font-size:18px; line-height:1.6; color:rgba(42,42,38,0.78); max-width:640px; margin:0 0 48px 0;">A estrutura por trás de cada decisão que tomamos com você — quatro eixos em equilíbrio, como a escultura clássica que dá nome ao método.</p>
+<div class="grid-4col" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(42,42,38,0.12); margin-bottom:64px;">
+<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.3); margin-bottom:18px;">01</div><div style="font-weight:500; font-size:16px; margin-bottom:8px; letter-spacing:0.02em;">ESTRATÉGIA</div><div style="font-size:15px; line-height:1.6; color:rgba(42,42,38,0.75);">Direcionamento empresarial e visão de crescimento.</div></div>
+<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.3); margin-bottom:18px;">02</div><div style="font-weight:500; font-size:16px; margin-bottom:8px; letter-spacing:0.02em;">ESTRUTURA</div><div style="font-size:15px; line-height:1.6; color:rgba(42,42,38,0.75);">Organização interna e desenho operacional.</div></div>
+<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.3); margin-bottom:18px;">03</div><div style="font-weight:500; font-size:16px; margin-bottom:8px; letter-spacing:0.02em;">OPERAÇÕES</div><div style="font-size:15px; line-height:1.6; color:rgba(42,42,38,0.75);">Padronização e eficiência do dia a dia.</div></div>
+<div style="background:#FAF8F4; padding:32px 26px;"><div style="font-family:'Nephilm',serif; font-size:26px; color:rgba(42,42,38,0.3); margin-bottom:18px;">04</div><div style="font-weight:500; font-size:16px; margin-bottom:8px; letter-spacing:0.02em;">RELACIONAMENTO</div><div style="font-size:15px; line-height:1.6; color:rgba(42,42,38,0.75);">Experiência do paciente e retenção.</div></div>
 </div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:rgba(42,42,38,0.4); margin-bottom:28px;">A jornada</div>
-<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
-<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">01</div><div style="font-weight:500; font-size:14px;">Conversa Estratégica</div></div>
-<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">02</div><div style="font-weight:500; font-size:14px;">Diagnóstico Empresarial</div></div>
-<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">03</div><div style="font-weight:500; font-size:14px;">Plano de Estruturação</div></div>
-<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">04</div><div style="font-weight:500; font-size:14px;">Acompanhamento e Implementação</div></div>
+<div class="grid-4col" style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">01</div><div style="font-weight:500; font-size:15px;">Conversa Estratégica</div></div>
+<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">02</div><div style="font-weight:500; font-size:15px;">Diagnóstico Empresarial</div></div>
+<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">03</div><div style="font-weight:500; font-size:15px;">Plano de Estruturação</div></div>
+<div style="border-top:2px solid #5C5B3B; padding-top:16px;"><div style="font-size:13px; color:rgba(42,42,38,0.4); margin-bottom:6px;">04</div><div style="font-weight:500; font-size:15px;">Acompanhamento e Implementação</div></div>
 </div>
 </section>
 
@@ -176,37 +195,39 @@ a:hover { opacity:0.7; }
 <img src="assets/img/texture-2.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
 </div>
 
-<section id="diferenciais" style="position:relative; max-width:1180px; margin:0 auto; padding:120px 56px;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">08 — Diferenciais</div>
+<section id="diferenciais" class="grid-2col section-pad" style="position:relative; max-width:1180px; margin:0 auto; padding:96px 56px; display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px;">
+<div class="corner-index" style="position:absolute; top:96px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">08 — Diferenciais</div>
+<div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Diferenciais</div>
-<h2 style="font-family:'Nephilm',serif; font-size:38px; font-weight:400; line-height:1.3; letter-spacing:-0.01em; margin:0 0 64px 0; max-width:780px;">Menos software. Mais clareza.</h2>
-<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:48px;">
-<div><div style="font-family:'Nephilm',serif; font-size:22px; margin-bottom:14px;">Uma tese, não um módulo</div><div style="font-size:14px; line-height:1.65; color:rgba(42,42,38,0.68);">Não vendemos mais uma funcionalidade. Vendemos uma forma diferente de decidir.</div></div>
-<div><div style="font-family:'Nephilm',serif; font-size:22px; margin-bottom:14px;">Mesma origem, duas frentes</div><div style="font-size:14px; line-height:1.65; color:rgba(42,42,38,0.68);">Não criamos consultoria para vender software, nem software para ilustrar consultoria.</div></div>
-<div><div style="font-family:'Nephilm',serif; font-size:22px; margin-bottom:14px;">Acompanhamento até a mudança</div><div style="font-size:14px; line-height:1.65; color:rgba(42,42,38,0.68);">Não entregamos um relatório e desaparecemos. Ficamos até a decisão virar rotina.</div></div>
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.2; letter-spacing:-0.01em; margin:0;">Menos software. Mais clareza.</h2>
+</div>
+<div style="display:flex; flex-direction:column; gap:0;">
+<div style="padding:0 0 28px 0; border-bottom:1px solid rgba(42,42,38,0.14);"><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:10px;">Uma tese, não um módulo</div><div style="font-size:16px; line-height:1.6; color:rgba(42,42,38,0.8);">Não vendemos mais uma funcionalidade. Vendemos uma forma diferente de decidir.</div></div>
+<div style="padding:28px 0; border-bottom:1px solid rgba(42,42,38,0.14);"><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:10px;">Mesma origem, duas frentes</div><div style="font-size:16px; line-height:1.6; color:rgba(42,42,38,0.8);">Não criamos consultoria para vender software, nem software para ilustrar consultoria.</div></div>
+<div style="padding:28px 0 0 0;"><div style="font-family:'Nephilm',serif; font-size:24px; margin-bottom:10px;">Acompanhamento até a mudança</div><div style="font-size:16px; line-height:1.6; color:rgba(42,42,38,0.8);">Não entregamos um relatório e desaparecemos. Ficamos até a decisão virar rotina.</div></div>
 </div>
 </section>
 
-<section id="quemsomos" style="position:relative; max-width:1180px; margin:0 auto; padding:120px 56px; border-top:1px solid rgba(42,42,38,0.1); display:grid; grid-template-columns:0.8fr 1.2fr; gap:64px; align-items:center;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">09 — Quem está por trás</div>
+<section id="quemsomos" class="grid-2col section-pad" style="position:relative; max-width:1180px; margin:0 auto; padding:120px 56px; border-top:1px solid rgba(42,42,38,0.1); display:grid; grid-template-columns:0.8fr 1.2fr; gap:64px; align-items:center;">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(42,42,38,0.35); font-weight:500;">09 — Quem está por trás</div>
 <div style="aspect-ratio:4/5; width:100%; max-width:360px; border-radius:2px; overflow:hidden; background:#26251b; display:flex; align-items:center; justify-content:center;">
 <span style="font-family:'Nephilm',serif; font-size:96px; color:#CBA373;">M</span>
 </div>
 <div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Quem está por trás</div>
-<h2 style="font-family:'Nephilm',serif; font-size:34px; font-weight:400; margin:0 0 6px 0;">Phelipe Marmore</h2>
-<div style="font-size:13px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(42,42,38,0.5); margin-bottom:24px;">Founder &amp; CEO</div>
-<p style="font-size:16px; line-height:1.75; color:rgba(42,42,38,0.7); max-width:520px; margin:0;">Criou a Mármore para ajudar médicos a compreender o negócio por inteiro, tomar decisões melhores e construir clínicas mais fortes, rentáveis e preparadas para crescer.</p>
+<h2 style="font-family:'Nephilm',serif; font-size:38px; font-weight:400; margin:0 0 8px 0;">Phelipe Marmore</h2>
+<div style="font-size:14px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:rgba(42,42,38,0.55); margin-bottom:24px;">Founder &amp; CEO</div>
+<p style="font-size:18px; line-height:1.65; color:rgba(42,42,38,0.82); max-width:640px; margin:0;">Criou a Mármore para ajudar médicos a compreender o negócio por inteiro, tomar decisões melhores e construir clínicas mais fortes, rentáveis e preparadas para crescer.</p>
 </div>
 </section>
 
 <section id="contato" style="position:relative; background:#26251b; color:#F4F1EA;">
-<div style="max-width:1180px; margin:0 auto; padding:120px 56px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center; position:relative;">
-<div style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,241,234,0.4); font-weight:500;">10 — Contato</div>
+<div class="grid-2col section-pad" style="max-width:1180px; margin:0 auto; padding:120px 56px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center; position:relative;">
+<div class="corner-index" style="position:absolute; top:120px; right:56px; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(244,241,234,0.4); font-weight:500;">10 — Contato</div>
 <div>
 <div style="font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:#CBA373; margin-bottom:20px;">Contato</div>
-<h2 style="font-family:'Nephilm',serif; font-size:40px; font-weight:400; line-height:1.2; letter-spacing:-0.015em; text-transform:none; margin:0 0 40px 0; max-width:520px;">Você não precisa de mais dado. Precisa de clareza para decidir.</h2>
-<a href="https://wa.me/5521991252808" style="display:inline-block; font-family:'Mirai',sans-serif; font-weight:500; font-size:15px; padding:16px 32px; background:#CBA373; color:#26251b; border-radius:6px;">Falar com a Mármore</a>
+<h2 class="h2-title" style="font-family:'Nephilm',serif; font-size:48px; font-weight:400; line-height:1.15; letter-spacing:-0.015em; text-transform:none; margin:0 0 36px 0; max-width:560px;">Você não precisa de mais dado. Precisa de clareza para decidir.</h2>
+<a href="https://wa.me/5521991252808" class="btn-gold" style="display:inline-block; font-family:'Mirai',sans-serif; font-weight:500; font-size:16px; padding:17px 34px; background:#CBA373; color:#26251b; border-radius:6px;">Falar com a Mármore</a>
 </div>
 <div style="display:flex; flex-direction:column; gap:20px; font-size:15px;">
 <div><div style="font-size:11px; color:rgba(244,241,234,0.45); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">WhatsApp</div><a href="https://wa.me/5521991252808" style="color:#F4F1EA;">+55 21 99125-2808</a></div>
@@ -215,12 +236,12 @@ a:hover { opacity:0.7; }
 </div>
 </section>
 
-<footer style="max-width:1180px; margin:0 auto; padding:48px 56px 64px 56px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+<footer class="section-pad" style="max-width:1180px; margin:0 auto; padding:48px 56px 64px 56px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
 <div style="display:flex; align-items:center; gap:14px;">
 <img src="assets/img/logo.png" alt="Marmore&amp;Co" style="height:20px; width:auto;">
-<span style="font-size:12px; color:rgba(42,42,38,0.4);">Mármore Consultoria</span>
+<span style="font-size:13px; color:rgba(42,42,38,0.5);">Mármore Consultoria</span>
 </div>
-<div style="font-size:12px; color:rgba(42,42,38,0.45);">www.marmoreconsultoria.com.br</div>
+<div style="font-size:13px; color:rgba(42,42,38,0.5);">www.marmoreconsultoria.com.br</div>
 </footer>
 
 </div>
