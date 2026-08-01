@@ -86,11 +86,37 @@ a:hover { opacity:0.7; }
 @media (max-width:1024px) {
   .grid-2col, .grid-3col { grid-template-columns:1fr !important; }
 }
+
+:root { --gutter-m:24px; }
+
+.nav-toggle { display:none; flex-direction:column; justify-content:center; align-items:flex-end; gap:5px; width:32px; height:32px; background:none; border:none; cursor:pointer; padding:0; flex-shrink:0; }
+.nav-toggle span { display:block; width:100%; height:1.5px; background:#2A2A26; }
+@media (prefers-reduced-motion: no-preference) {
+  .nav-toggle span { transition:transform 220ms cubic-bezier(.4,0,.2,1), opacity 220ms ease, width 220ms ease; }
+}
+.nav-toggle.is-open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity:0; }
+.nav-toggle.is-open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); width:100%; }
+
+#mobile-cta-bar { display:none; }
+
 @media (max-width:768px) {
-  body { font-size:17px; }
-  .section-pad { padding-left:22px !important; padding-right:22px !important; }
-  h1[style] { font-size:38px !important; }
+  body { font-size:17px; padding-bottom:78px; }
+  .section-pad { padding-left:var(--gutter-m) !important; padding-right:var(--gutter-m) !important; }
+  .line-left { left:var(--gutter-m) !important; }
+  .line-right { right:var(--gutter-m) !important; }
+  h1[style] { font-size:30px !important; line-height:1.18 !important; }
   .h2-title { font-size:32px !important; }
+
+  .nav-toggle { display:flex; }
+  #site-nav, #header-cta { flex:1 1 100% !important; display:none !important; }
+  #site-header > div { align-items:flex-start !important; }
+  #site-header.nav-open #site-nav, #site-header.nav-open #header-cta { display:flex !important; }
+  #site-nav { flex-direction:column; align-items:flex-start; gap:16px !important; padding-top:16px; margin-top:4px; border-top:1px solid rgba(42,42,38,0.1); justify-content:flex-start !important; }
+  #header-cta { justify-content:center; margin-top:4px; }
+
+  #mobile-cta-bar { display:block; position:fixed; left:0; right:0; bottom:0; z-index:80; background:#FAF8F4; border-top:1px solid rgba(42,42,38,0.14); padding:12px var(--gutter-m) calc(12px + env(safe-area-inset-bottom, 0px)) var(--gutter-m); }
+  #mobile-cta-bar a { display:flex; align-items:center; justify-content:center; gap:8px; background:#2A2A26; color:#FAF8F4; font-family:'Mirai',sans-serif; font-weight:500; font-size:15px; padding:14px; border-radius:8px; }
 }
 </style>
 </head>
@@ -98,20 +124,23 @@ a:hover { opacity:0.7; }
 
 <div style="background:#FAF8F4; color:#2A2A26; font-family:'Mirai',sans-serif; position:relative;">
 
-<div class="line-draw" style="position:fixed; top:0; left:32px; width:1px; height:100vh; background:rgba(42,42,38,0.07); z-index:60; pointer-events:none;"></div>
-<div class="line-draw" style="position:fixed; top:0; right:32px; width:1px; height:100vh; background:rgba(42,42,38,0.07); z-index:60; pointer-events:none;"></div>
+<div class="line-draw line-left" style="position:fixed; top:0; left:32px; width:1px; height:100vh; background:rgba(42,42,38,0.07); z-index:60; pointer-events:none;"></div>
+<div class="line-draw line-right" style="position:fixed; top:0; right:32px; width:1px; height:100vh; background:rgba(42,42,38,0.07); z-index:60; pointer-events:none;"></div>
 
 <header id="site-header" style="position:sticky; top:0; background:#FAF8F4; border-bottom:1px solid rgba(42,42,38,0.1); z-index:70;">
 <div class="section-pad" style="max-width:1180px; margin:0 auto; padding:22px clamp(24px,5vw,56px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
 <a href="#hero" style="flex-shrink:0; line-height:0;"><img src="assets/img/mark-m.png" alt="Marmore&amp;Co" style="height:30px; width:auto; display:block;"></a>
-<nav style="display:flex; gap:clamp(14px,2.4vw,22px); flex-wrap:wrap; flex:1 1 auto; justify-content:center; min-width:0;">
+<button id="nav-toggle" class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+<span></span><span></span><span></span>
+</button>
+<nav id="site-nav" style="display:flex; gap:clamp(14px,2.4vw,22px); flex-wrap:wrap; flex:1 1 auto; justify-content:center; min-width:0;">
 <a href="#atuamos" style="font-size:14px; font-weight:500; letter-spacing:0.02em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Como atuamos</a>
 <a href="#metodo" style="font-size:14px; font-weight:500; letter-spacing:0.02em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Método</a>
 <a href="#plataforma" style="font-size:14px; font-weight:500; letter-spacing:0.02em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Plataforma</a>
 <a href="#quemsomos" style="font-size:14px; font-weight:500; letter-spacing:0.02em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Quem somos</a>
 <a href="#contato" style="font-size:14px; font-weight:500; letter-spacing:0.02em; text-transform:uppercase; color:rgba(42,42,38,0.7); white-space:nowrap;">Conversar</a>
 </nav>
-<a href="#plataforma" class="link-underline" style="display:inline-flex; align-items:center; gap:6px; font-family:'Mirai',sans-serif; font-weight:500; font-size:14px; padding:10px 18px; border:1px solid rgba(42,42,38,0.3); border-radius:6px; color:#2A2A26; white-space:nowrap; flex-shrink:0;">Conhecer a plataforma <span>→</span></a>
+<a href="#plataforma" id="header-cta" class="link-underline" style="display:inline-flex; align-items:center; gap:6px; font-family:'Mirai',sans-serif; font-weight:500; font-size:14px; padding:10px 18px; border:1px solid rgba(42,42,38,0.3); border-radius:6px; color:#2A2A26; white-space:nowrap; flex-shrink:0;">Conhecer a plataforma <span>→</span></a>
 </div>
 </header>
 
@@ -277,6 +306,10 @@ a:hover { opacity:0.7; }
 
 </div>
 
+<div id="mobile-cta-bar">
+<a href="https://wa.me/5521991252808">Falar com a Mármore <span>→</span></a>
+</div>
+
 <script>
 (function () {
   var header = document.getElementById('site-header');
@@ -286,6 +319,24 @@ a:hover { opacity:0.7; }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Mobile hamburger menu — works regardless of motion preference.
+  var navToggle = document.getElementById('nav-toggle');
+  if (navToggle) {
+    var closeNav = function () {
+      header.classList.remove('nav-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+    navToggle.addEventListener('click', function () {
+      var isOpen = header.classList.toggle('nav-open');
+      navToggle.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('#site-nav a, #header-cta').forEach(function (a) {
+      a.addEventListener('click', closeNav);
+    });
+  }
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) return;
